@@ -1,0 +1,23 @@
+{
+  "name": "lunch",
+  "version": "1.0.0",
+  "description": "Lunch randomization",
+  "main": "shuffle.js",
+  "dependencies": {
+    "lodash": "^3.9.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/casetext/lunch.git"
+  },
+  "author": "daguej",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/casetext/lunch/issues"
+  },
+  "homepage": "https://github.com/casetext/lunch#readme"
+}
