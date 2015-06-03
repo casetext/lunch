@@ -1,7 +1,7 @@
-var ppl = require('./people.json'),
+var ppl = require('./people.js'),
 	_ = require('lodash');
 
-var grp = 8;
+var grp = Math.ceil(ppl.length / 2);
 
 ppl = _.shuffle(ppl);
 
