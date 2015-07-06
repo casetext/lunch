@@ -4,6 +4,7 @@
   "description": "Lunch randomization",
   "main": "shuffle.js",
   "dependencies": {
+    "copy-paste": "^1.1.2",
     "lodash": "^3.9.3"
   },
   "devDependencies": {},
