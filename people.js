@@ -2,6 +2,7 @@
 module.exports = [
 	"Anand",
 	"Bernardo",
+	"Hannah",
 	"Harry",
 	"Jake",
 	"Josh",
