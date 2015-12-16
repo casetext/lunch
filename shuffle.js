@@ -2,7 +2,11 @@ var ppl = require('./people.js'),
 	_ = require('lodash'),
 	clipboard = require('copy-paste');
 
-var grp = Math.ceil(ppl.length / 2), gid = 0, result = '';
+var groupCount = 1, max = 6;
+
+while (ppl.length/groupCount > max) groupCount++;
+
+var grp = Math.ceil(ppl.length / groupCount), gid = 0, result = '';
 
 ppl = _.shuffle(ppl);
 
