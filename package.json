@@ -5,7 +5,8 @@
   "main": "shuffle.js",
   "dependencies": {
     "copy-paste": "^1.1.2",
-    "lodash": "^3.9.3"
+    "lodash": "^3.9.3",
+    "request": "^2.67.0"
   },
   "devDependencies": {},
   "scripts": {
