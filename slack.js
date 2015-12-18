@@ -4,10 +4,12 @@ exports = module.exports = function(n, users) {
 	try {
 		var request = require('request'),
 			slackGroups = require('./slack-groups.json'),
-		token = process.env.SLACK_TOKEN;
-		n--;
+			token = process.env.SLACK_TOKEN;
 
-		//return console.log(n, slackGroups[n], users);
+		users = users.map(function(u) {
+			return u.uid;
+		});
+
 		request({
 			url: 'https://slack.com/api/usergroups.users.update',
 			json: true,

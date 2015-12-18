@@ -3,37 +3,31 @@ var ppl = require('./people.js'),
 	_ = require('lodash'),
 	clipboard = require('copy-paste');
 
-var groupCount = 1, max = 6;
+var groupCount = 1, max = 6, groups = [[]], g = 0, result = '';
 
-while (ppl.length/groupCount > max) groupCount++;
-
-var grp = Math.ceil(ppl.length / groupCount), gid = 0, result = '', users;
+while (ppl.length/groupCount > max) {
+	groupCount++;
+	groups.push([]);
+}
 
 ppl = _.shuffle(ppl);
 
-out('\n');
-group();
+while (ppl.length) {
+	groups[g].push(ppl.pop());
+	if (++g >= groupCount) g = 0;
+}
 
-for (var i = 0; i < ppl.length; i++) {
-	out(ppl[i].name + ' ');
-	users.push(ppl[i].uid);
-	if ((i+1) % grp == 0 && i+1 < ppl.length) {
-		out('\n\n');
-		group();
+for (var i = 0; i < groupCount; i++) {
+	slack(i, groups[i]);
+	out('@group' + (i+1));
+	for (var u = 0; u < groups[i].length; u++) {
+		out(' ' + groups[i][u].name);
 	}
+	out('\n\n');
 }
 
 
-out('\n');
-slack(gid, users);
 clipboard.copy(result);
-
-
-function group() {
-	if (users) slack(gid, users);
-	out('@group' + ++gid + ' ');
-	users = [];
-}
 
 function out(s) {
 	process.stdout.write(s);
