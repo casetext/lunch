@@ -11,6 +11,7 @@ module.exports = [
 	// { name: "Nicole", uid: "U066AQ1DY" },
 	{ name: "Pablo", uid: "U066A7B89" },
 	{ name: "Richard", uid: "U066A7BT3" },
+	{ name: "Ryan", uid: "U0G134GAY" },
 	{ name: "Sarah", uid: "U0669U8CT" },
 	{ name: "Steffi", uid: "U066AB9SQ" },
 	{ name: "Tara", uid: "U066AMZ5Y" },
