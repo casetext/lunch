@@ -1,9 +1,9 @@
 // comment people out who aren't here today
+// get uids from https://api.slack.com/methods/users.list/test
 module.exports = [
 	{ name: "Anand", uid: "U066FQH35" },
 	{ name: "Bernardo", uid: "U066CEV4Z" },
 	{ name: "Hannah", uid: "U07TAN5FH" },
-	{ name: "Harry", uid: "U066A8MSR" },
 	{ name: "Jake", uid: "U054U11DT" },
 	{ name: "Josh", uid: "U066BM44A" },
 	{ name: "Katherine", uid: "U066AKUB1" },
@@ -16,5 +16,6 @@ module.exports = [
 	{ name: "Steffi", uid: "U066AB9SQ" },
 	{ name: "Tara", uid: "U066AMZ5Y" },
 	{ name: "Tom", uid: "U066AUDMX" },
+	{ name: "Thomas", uid: "U0RPV8CEL" },
 	{ name: "Yiping", uid: "U066A9RFW" }
 ];
